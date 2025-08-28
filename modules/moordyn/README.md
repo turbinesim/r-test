@@ -22,7 +22,7 @@ Body and rod coupled behavior tet with mooring lines. Checks coupled kinematics 
 
 **md_Single_Line_Quasi_Static_Test**
 
-Compares MoorDyn and MoorPy against eachother for simple single line case. 
+Compares MoorDyn and MoorPy against eachother for simple single line case. Unused.
 
 **md_VIV**
 
