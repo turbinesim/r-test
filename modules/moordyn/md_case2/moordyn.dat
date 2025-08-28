@@ -27,6 +27,7 @@ Line  LineType NodeAnch  NodeFair UnstrLen  NumSegs    Flags/Outputs
 4.0      CdScaleIC - factor by which to scale drag coefficients during dynamic relaxation (-)
 0.001    threshIC  - threshold for IC convergence (-)  
 0.1             dtOut                                   
+1       disableOutTime
 -------------------------- OUTPUTS --------------------------------
 FAIRTEN2   
 Line1NBPZ                                

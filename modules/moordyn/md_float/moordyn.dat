@@ -31,6 +31,7 @@ Line     LineType NodeA     NodeB  UnstrLen  NumSegs     Flags/Outputs
 6        WtrDpth      - water depth
 0.0      TmaxIC       - threshold for IC convergence
 0.1      dtOut
+1       disableOutTime
 ------------------------------ OUTPUTS -----------------------------------------------------
 Body1RY
 Body1PZ
