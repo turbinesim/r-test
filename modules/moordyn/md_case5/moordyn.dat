@@ -20,6 +20,7 @@ Line  LineType NodeAnch  NodeFair UnstrLen  NumSegs    Flags/Outputs
 3.0e5    cBot      - bottom damping (Pa-s/m)
 0.0     TmaxIC    - max time for ic gen (s)
 0.1      dtOut                                      
+1       disableOutTime
 ------------------------ OUTPUTS --------------------------------------------                                           
 FAIRTEN1                      
 ------------------------- need this line --------------------------------------                                                                                     
