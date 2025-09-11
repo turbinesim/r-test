@@ -38,6 +38,7 @@ Line     LineType NodeA     NodeB  UnstrLen  NumSegs     Flags/Outputs
 3.0e5    cb           - bottom damping
 70       WtrDpth      - water depth
 3.0      CdScaleIC       - factor by which to scale drag coefficients during dynamic relaxation IC gen
+1       disableOutTime
 0.01    threshIC     - threshold for IC convergence
 0.0    TmaxIC       - threshold for IC convergence
 0.1     dtIC         - Time lapse between convergence tests (s)
