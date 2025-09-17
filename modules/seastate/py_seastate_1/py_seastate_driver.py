@@ -119,8 +119,9 @@ class SeaStateConfig:
     ss_pointer = c_void_p(None)
 
     # VTK settings
-    vtk_field_len: int = 9         # Length of the time field in filename
- 
+    vtk_write: int = 0      # 0: none, 1: init, 2: animation
+    vtk_dt:float = 0.25
+    vtk_output_dir: str = "vtk"
 
 #-------------------------------------------------------------------------------
 # Main driver class
@@ -169,6 +170,11 @@ class SeaStateDriver:
         sslib.numTimeSteps = len(self.time)
         # sslib.debuglevel -> debug level for IfW library
         sslib.debuglevel = self.config.debug_level
+
+        # configure vtk
+        sslib.vtk_write = self.config.vtk_write
+        sslib.vtk_dt    = self.config.vtk_dt
+        sslib.vtk_output_dir = self.config.vtk_output_dir
 
         return sslib
 
