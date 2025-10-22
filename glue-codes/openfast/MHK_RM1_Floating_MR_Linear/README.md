@@ -1,4 +1,4 @@
-## MHK_RM1_Floating_MR
+## MHK_RM1_Floating_MR_Linear
 
 Test of features for floating multi-rotor MHK turbines
 
@@ -9,7 +9,6 @@ Test of features for floating multi-rotor MHK turbines
 - Fixed rotor rotational speeds
 - Standard HAT geometry inputs
 - Turbulent inflow
-- OLAF
 - Steady airfoil aerodynamics
 - Cavitation turned on
 
