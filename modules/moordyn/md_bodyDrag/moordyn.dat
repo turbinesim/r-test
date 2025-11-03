@@ -21,6 +21,7 @@ Line     LineType NodeA     NodeB  UnstrLen  NumSegs     Flags/Outputs
 0.002   dtM          - time step to use in mooring integration
 15       WtrDpth      - water depth
 0.0    TmaxIC       - threshold for IC convergence
+1       disableOutTime
 ------------------------ OUTPUTS --------------------------------------------                                           
 FAIRTEN1             
 Body1PZ      

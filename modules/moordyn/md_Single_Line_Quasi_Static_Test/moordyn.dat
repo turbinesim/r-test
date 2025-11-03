@@ -23,6 +23,7 @@ Line      LineType  AttachA    AttachB  UnstrLen  NumSegs   Outputs
 4.0      CdScaleIC    - factor by which to scale drag coefficients during dynamic relaxation (-)
 0.01     threshIC     - threshold for IC convergence (-)
 0.20     dtOut     - Output time step (-)
+1       disableOutTime
 ----------------------------OUTPUTS--------------------------------------------
 P1FX
 P1FY

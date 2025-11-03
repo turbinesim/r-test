@@ -19,6 +19,7 @@ ID    LineType      AttachA  AttachB  UnstrLen  NumSegs  LineOutputs
 5.0              dtIC      - The threshold amount of time the system must be converged for to be considered stationary (s)
 0.001            threshIC  - The lines tension maximum relative error to consider that the initial condition have converged
 200              WtrDpth   - The water depth (m)
+1       disableOutTime
 --------------------- OUTPUTS ---------------------
 FairTen1
 Line1NBPX

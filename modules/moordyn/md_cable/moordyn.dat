@@ -25,6 +25,7 @@ Line     LineType   NodeA     NodeB   UnstrLen  NumSegs   Flags/Outputs
 600      WtrDpth       - water depth
 0        TmaxIC        - threshold for IC convergence
 0.01      dtOut     
+1       disableOutTime
 ---------------------- OUTPUTS -----------------------------------------
 FAIRTEN1
 LINE3NAPZ
