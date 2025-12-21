@@ -83,7 +83,7 @@ class SeaStateConfig:
     # seastate python library interface must be informed about the
     # following 2 time related information variables
     #   - ifwlib.dt -> timestep seastate is called at
-    #   - ifwlib.numTimeSteps -> total number of timesteps, used to construct
+    #   - ifwlib.time_max -> total simulation time
     #     arrays to hold the output channel
     t_start: float = 30.0   # initial time
     t_final: float = 48.0   # final time
@@ -167,7 +167,7 @@ class SeaStateDriver:
         # sslib.dt -> timestep seastate is called at
         sslib.dt = self.config.dt
         # sslib.numTimeSteps -> total number of timesteps, used to construct arrays to hold the output channel
-        sslib.numTimeSteps = len(self.time)
+        sslib.time_max = self.config.t_final - self.config.t_start
         # sslib.debuglevel -> debug level for IfW library
         sslib.debuglevel = self.config.debug_level
 
