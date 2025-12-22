@@ -167,7 +167,7 @@ class SeaStateDriver:
         # sslib.dt -> timestep seastate is called at
         sslib.dt = self.config.dt
         # sslib.numTimeSteps -> total number of timesteps, used to construct arrays to hold the output channel
-        sslib.time_max = self.config.t_final - self.config.t_start
+        sslib.time_max = self.config.t_final
         # sslib.debuglevel -> debug level for IfW library
         sslib.debuglevel = self.config.debug_level
 
@@ -266,7 +266,7 @@ class SeaStateDriver:
                 for j in range(self.numuResPts):
                     vel = np.zeros((3,), dtype=float)
                     acc = np.zeros((3,), dtype=float)
-                    nodeInWater = np.zeros((1,), dtype=int)
+                    nodeInWater: int = 0
                     elev: float = 0.0
                     normVec = np.zeros((3,), dtype=float)
                     # get the fluid velocity/acceleration
