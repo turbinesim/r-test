@@ -9,7 +9,7 @@
 !TODO: Froude scaling is not complete.  This can be enabled after finishing that part of the code.  For now remove these lines, or leave commented out
 !          1    ScaleFact        - scaling factor for scaling full size model to wavetank scale results (Froude scaling: lambda = full_size_dimension / model_size_dimension) [>1 expected] (-)
 !          1    DensFact         - ratio of density - Density_full/Density_model (rho_F/rho_M).  Used with Froude scaling of forces/moments (-)
-          1    DebugLevel       - 0: none, 1: I/O summary, 2: +positions/orientations passed, 3:+input file, 4: +all meshes
+          0    DebugLevel       - 0: none, 1: I/O summary, 2: +positions/orientations passed, 3:+input file, 4: +all meshes
 "RM1_tank_test" OutRootName     - Root name for any summary or other files
 ! -------- Environment ----------------
     9.80665    Gravity          - Gravitational acceleration (m/s^2)
@@ -21,13 +21,13 @@
          50    WtrDpth          - Water depth (m)
           0    MSL2SWL          - Offset between still-water level and mean sea level (m) [positive upward]
 ! -------- SeaState -------------------
-"../../../reg_tests/r-test/glue-codes/openfast/MHK_RM1_Floating/SeaState.dat"                      SS_InputFile   - SeaState input file
+"../../openfast/MHK_RM1_Floating/SeaState.dat"                      SS_InputFile   - SeaState input file
          0     WaveTimeShift    - Shift the SeaState wavetime by this amount (for phase shifting waves to match tank) (s)
 ! -------- MoorDyn --------------------
-"../../../reg_tests/r-test/glue-codes/openfast/MHK_RM1_Floating/MHK_RM1_Floating_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
+"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
 ! -------- AeroDyn + InflowWind -------
-"../../../reg_tests/r-test/glue-codes/openfast/MHK_RM1_Floating/MHK_RM1_Floating_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
-"../../../reg_tests/r-test/glue-codes/openfast/MHK_RM1_Floating/MHK_RM1_Floating_InflowWind.dat"   IfW_InputFile  - InflowWind input file
+"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
+"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_InflowWind.dat"   IfW_InputFile  - InflowWind input file
 ! -------- Turbine Configuration ------
           2    NumBl            - Number of blades (-)
           1    HubRad           - The distance from the rotor apex to the blade root (m)
