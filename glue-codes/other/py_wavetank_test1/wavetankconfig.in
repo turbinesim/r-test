@@ -21,12 +21,12 @@
          50    WtrDpth          - Water depth (m)
           0    MSL2SWL          - Offset between still-water level and mean sea level (m) [positive upward]
 ! -------- SeaState -------------------
-"FRM1Q_SeaState.dat"                      SS_InputFile   - SeaState input file
+"../../openfast/MHK_RM1_Floating_Tank-scaled/FRM1Q_SeaState.dat"                      SS_InputFile   - SeaState input file
          0     WaveTimeShift    - Shift the SeaState wavetime by this amount (for phase shifting waves to match tank) (s)
 ! -------- MoorDyn --------------------
-"FRM1Q_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
+"../../openfast/MHK_RM1_Floating_Tank-scaled/FRM1Q_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
 ! -------- AeroDyn + InflowWind -------
-"FRM1Q_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
+"../../openfast/MHK_RM1_Floating_Tank-scaled/FRM1Q_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
 "FRM1Q_InflowWind.dat"   IfW_InputFile  - InflowWind input file
 ! -------- Turbine Configuration ------
           2    NumBl            - Number of blades (-)
