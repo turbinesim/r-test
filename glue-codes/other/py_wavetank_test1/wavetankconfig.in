@@ -10,7 +10,7 @@
 !          1    ScaleFact        - scaling factor for scaling full size model to wavetank scale results (Froude scaling: lambda = full_size_dimension / model_size_dimension) [>1 expected] (-)
 !          1    DensFact         - ratio of density - Density_full/Density_model (rho_F/rho_M).  Used with Froude scaling of forces/moments (-)
           0    DebugLevel       - 0: none, 1: I/O summary, 2: +positions/orientations passed, 3:+input file, 4: +all meshes
-"RM1_tank_test" OutRootName     - Root name for any summary or other files
+"FRM1Q_Floating_tank_test" OutRootName     - Root name for any summary or other files
 ! -------- Environment ----------------
     9.80665    Gravity          - Gravitational acceleration (m/s^2)
        1025    WtrDens          - Water density (kg/m^3)
@@ -21,13 +21,13 @@
          50    WtrDpth          - Water depth (m)
           0    MSL2SWL          - Offset between still-water level and mean sea level (m) [positive upward]
 ! -------- SeaState -------------------
-"../../openfast/MHK_RM1_Floating/SeaState.dat"                      SS_InputFile   - SeaState input file
+"FRM1Q_SeaState.dat"                      SS_InputFile   - SeaState input file
          0     WaveTimeShift    - Shift the SeaState wavetime by this amount (for phase shifting waves to match tank) (s)
 ! -------- MoorDyn --------------------
-"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
+"FRM1Q_MoorDyn.dat"      MD_InputFile   - MoorDyn input file
 ! -------- AeroDyn + InflowWind -------
-"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
-"../../openfast/MHK_RM1_Floating/MHK_RM1_Floating_InflowWind.dat"   IfW_InputFile  - InflowWind input file
+"FRM1Q_AeroDyn.dat"      AD_InputFile   - AeroDyn input file
+"FRM1Q_InflowWind.dat"   IfW_InputFile  - InflowWind input file
 ! -------- Turbine Configuration ------
           2    NumBl            - Number of blades (-)
           1    HubRad           - The distance from the rotor apex to the blade root (m)
@@ -52,7 +52,7 @@
 "ES20.6E2"     OutFmt           - Format used for text tabular output, excluding the time channel. (quoted string)
 ! -------- VTK output -----------------
 "vtk"          WrVTK_Dir        - output directory for visualization
-        2      WrVTK            - VTK visualization data output: (switch) {0=none; 1=initialization data only; 2=animation; 3=mode shapes}
+        0      WrVTK            - VTK visualization data output: (switch) {0=none; 1=initialization data only; 2=animation; 3=mode shapes}
         3      WrVTK_type       - Type of VTK visualization data: (switch) {1=surfaces; 2=basic meshes (lines/points); 3=all meshes (debug)} [unused if WrVTK=0] [Only lines/points supported at present]
       0.1      WrVTK_DT         - DT for writing VTK files
 -3,-.5,0,5,.5,2 VTKNacDim       - Nacelle dimension passed in for VTK surface rendering [0,y0,z0,Lx,Ly,Lz] (m)
