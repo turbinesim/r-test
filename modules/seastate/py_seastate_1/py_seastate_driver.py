@@ -304,7 +304,7 @@ class SeaStateDriver:
                             normVec,
                         )
                     except Exception as e:
-                        print(f"Error in getting surface elevation at t={t} for {pos}: {e}")
+                        print(f"Error in getting surface normal vector at t={t} for {pos}: {e}")
                         raise
 
                     # Write debug output (positions and velocities) for each timestep.
