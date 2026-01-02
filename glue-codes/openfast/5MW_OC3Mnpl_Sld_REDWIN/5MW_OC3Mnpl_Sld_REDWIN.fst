@@ -4,22 +4,29 @@ FAST Certification Test : NREL 5.0 MW Baseline Wind Turbine with OC3 Monopile RF
 True          Echo            - Echo input data to <RootName>.ech (flag)
 "FATAL"       AbortLevel      - Error level when simulation should abort (string) {"WARNING", "SEVERE", "FATAL"}
          20   TMax            - Total run time (s)
-  0.0000125   DT              - Recommended module time step (s)
-          1   InterpOrder     - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
-          1   NumCrctn        - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}
+      0.001   DT              - Recommended module time step (s)
+          3   ModCoupling     - Module coupling method (switch) {1=loose; 2=tight with fixed Jacobian updates (DT_UJac); 3=tight with automatic Jacobian updates}
+          2   InterpOrder     - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
+          0   NumCrctn        - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}
+        1.0   RhoInf          - Numerical damping parameter for tight coupling generalized-alpha integrator (-) [0.0 to 1.0]
+       1e-4   ConvTol         - Convergence iteration error tolerance for tight coupling generalized alpha integrator (-)
+          6   MaxConvIter     - Maximum number of convergence iterations for tight coupling generalized alpha integrator (-)
       99999   DT_UJac         - Time between calls to get Jacobians (s)
-      1E+06   UJacSclFact     - Scaling factor used in Jacobians (-)
+    1000000   UJacSclFact     - Scaling factor used in Jacobians (-)
 ---------------------- FEATURE SWITCHES AND FLAGS ------------------------------
+          1   NRotors         - Number of rotors in turbine (-)
           1   CompElast       - Compute structural dynamics (switch) {1=ElastoDyn; 2=ElastoDyn + BeamDyn for blades}
           1   CompInflow      - Compute inflow wind velocities (switch) {0=still air; 1=InflowWind; 2=external from OpenFOAM}
           2   CompAero        - Compute aerodynamic loads (switch) {0=None; 1=AeroDyn v14; 2=AeroDyn v15}
           1   CompServo       - Compute control and electrical-drive dynamics (switch) {0=None; 1=ServoDyn}
+          1   CompSeaSt       - Compute sea state information (switch) {0=None; 1=SeaState}
           1   CompHydro       - Compute hydrodynamic loads (switch) {0=None; 1=HydroDyn}
           1   CompSub         - Compute sub-structural dynamics (switch) {0=None; 1=SubDyn; 2=External Platform MCKF}
           0   CompMooring     - Compute mooring system (switch) {0=None; 1=MAP++; 2=FEAMooring; 3=MoorDyn; 4=OrcaFlex}
           0   CompIce         - Compute ice loads (switch) {0=None; 1=IceFloe; 2=IceDyn}
           1   CompSoil        - Compute soil-structural dynamics (switch) {0=None; 1=with SubDyn mesh}
           0   MHK             - MHK turbine type (switch) {0=Not an MHK turbine; 1=Fixed MHK turbine; 2=Floating MHK turbine}
+          F   MirrorRotor     - Flag to reverse rotor rotation direction [1 to NRotors] {F=Normal, T=Mirror}
 ---------------------- ENVIRONMENTAL CONDITIONS --------------------------------
     9.80665   Gravity         - Gravitational acceleration (m/s^2)
       1.225   AirDens         - Air density (kg/m^3)
@@ -36,8 +43,9 @@ True          Echo            - Echo input data to <RootName>.ech (flag)
 ""    BDBldFile(2)    - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
 ""    BDBldFile(3)    - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
 "../5MW_Baseline/NRELOffshrBsline5MW_InflowWind_12mps.dat"    InflowFile      - Name of file containing inflow wind input parameters (quoted string)
-"NRELOffshrBsline5MW_OC3Monopile_AeroDyn15.dat"   AeroFile       - Name of file containing aerodynamic input parameters (quoted string)
+"NRELOffshrBsline5MW_OC3Monopile_AeroDyn.dat"     AeroFile       - Name of file containing aerodynamic input parameters (quoted string)
 "NRELOffshrBsline5MW_OC3Monopile_ServoDyn.dat"    ServoFile      - Name of file containing control and electrical-drive input parameters (quoted string)
+"OC6_phaseII_SeaState.dat"                        SeaStFile       - Name of file containing sea state input parameters (quoted string)
 "NRELOffshrBsline5MW_OC3Monopile_HydroDyn.dat"    HydroFile      - Name of file containing hydrodynamic input parameters (quoted string)
 "NRELOffshrBsline5MW_OC3Monopile_SubDyn.dat"      SubFile        - Name of file containing sub-structural input parameters (quoted string)
 "unused"                                          MooringFile    - Name of file containing mooring system input parameters (quoted string)
