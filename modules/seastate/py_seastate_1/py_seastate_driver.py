@@ -239,7 +239,7 @@ class SeaStateDriver:
         try:
             elevMin: float = 0.0
             elevMax: float = 0.0
-            elevMin,elevMax = self.sslib.get_elevMinMax(elevMin,elevMax)
+            elevMin,elevMax = self.sslib.get_elevMinMax()
             print(f"py_seastate_driver: Min wave elevation {elevMin}; max wave elevation {elevMax}")
         except Exception as e:
             print(f"Failed to get the WaveField min and max elevations")
