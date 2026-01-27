@@ -24,6 +24,7 @@ ID    Object            Fext                Blin               Bquad            
 0.005    dtM          - time step to use in mooring integration (s)
 0.0      dtIC         - time interval for analyzing convergence during IC gen (s)
 0.1      dtOut        - time step size to be written to output files (s)
+1       disableOutTime
 ------------------------------ OUTPUTS -----------------------------------------------------
 Body1PX
 Body1PY

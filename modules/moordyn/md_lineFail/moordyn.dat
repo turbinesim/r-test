@@ -38,6 +38,7 @@ FailureID    Node    Line(s)   FailTime   FailTen
 215      WtrDpth                                       
 0.001    dtM       - time step to use in mooring integration (s)
 3.0e6    kBot      - bottom stiffness (Pa/m)
+1       disableOutTime
 3.0e5    cBot      - bottom damping (Pa-s/m)
 0.1      dtIC      - time interval for analyzing convergence during IC gen (s)
 100.0     TmaxIC    - max time for ic gen (s)
